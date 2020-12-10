@@ -1,10 +1,8 @@
-import React, {useContext,useEffect} from 'react';
-import ApplicationContext from '~/context/ApplicationContext.js';
-
+import React,{useContext,useEffect} from 'react';
+import { ApplicationContext } from '~/context/ApplicationContext.js';
 
 function Contato() {
-
-    const {context, setContext} = useContext(ApplicationContext);
+    const [context, setContext] = useContext(ApplicationContext);
 
 
     useEffect(()=>{

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 export const DefaultSettings = {
 
@@ -6,8 +6,23 @@ export const DefaultSettings = {
 
 };
 
-const ApplicationContext = React.createContext(DefaultSettings);
+export const ApplicationContext = React.createContext(DefaultSettings);
 
 
-export default ApplicationContext;
+export default function AplicationProvider ({children}) {
+
+
+
+    const [appContext,setAppContext] = useState(DefaultSettings);
+
+    return (
+        <ApplicationContext.Provider value={[appContext,setAppContext]} >
+              {children}
+        </ApplicationContext.Provider>
+    )
+
+
+}
+
+
 

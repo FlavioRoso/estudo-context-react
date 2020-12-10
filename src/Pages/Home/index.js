@@ -1,8 +1,8 @@
 import React,{useContext,useEffect} from 'react';
-import ApplicationContext from '~/context/ApplicationContext.js';
+import { ApplicationContext } from '~/context/ApplicationContext.js';
 
 function Home() {
-    const {context, setContext} = useContext(ApplicationContext);
+    const [context, setContext] = useContext(ApplicationContext);
 
 
     useEffect(()=>{
